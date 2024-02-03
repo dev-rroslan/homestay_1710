@@ -1,5 +1,16 @@
 import Config
 
+config :homestay, Homestay.Mailer,
+  adapter: Resend.Swoosh.Adapter,
+  api_key: System.fetch_env!("RESEND_API_KEY")
+
+#config :undi, Undi.Mailer,
+#  adapter: Swoosh.Adapter.Brevo,
+#  api_key: System.get_env!("BREVO_UNDI_API_KEY")
+
+config :swoosh, :api_client, Swoosh.ApiClient.Finch
+
+
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the
 # system starts, so it is typically used to load production configuration
