@@ -31,6 +31,8 @@ config :homestay, HomestayWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :homestay, Homestay.Mailer, adapter: Swoosh.Adapters.Local
 
+#config :swoosh, api_client: Swoosh.ApiClient.Finch, finch_name: Homestay.Finch
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
